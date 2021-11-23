@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Firma.Views.Page1"
+             BackgroundColor="LightGray">
+    <ContentPage.Content>
+        <ScrollView>
+
+            <StackLayout BackgroundColor="Transparent"   Margin="30,30,30,30">
+                <Frame BackgroundColor="Transparent" BorderColor="Purple" Padding="24" CornerRadius="10">
+                    <Label Text="Firmas" HorizontalTextAlignment="Center" TextColor="Purple" FontSize="36"/>
+                </Frame>
+
+                <Grid>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <Label Text="  " Grid.Row="1" Grid.Column="0" TextColor="Violet"/>
+
+                    <Label Text="Firma" TextColor="Purple"  Grid.Row="1" Grid.Column="0"></Label>
+                    <Image x:Name="imagen" Source="" Grid.Row="1" Grid.Column="1"  Aspect="Fill" WidthRequest="100" HeightRequest="140"/>
+
+                    <Label Text="Nombre" TextColor="Purple"  Grid.Row="2" Grid.Column="0"></Label>
+                    <Entry x:Name="txtnombre"  TextColor="Purple"  Grid.Row="2" Grid.Column="1" Text="{Binding nombre}" ></Entry>
+
+                    <Label Text="Descripcion" TextColor="Purple"  Grid.Row="3" Grid.Column="0"></Label>
+                    <Entry x:Name="txtdesk" TextColor="Purple"  Grid.Row="3" Grid.Column="1" Text="{Binding descripcion}"></Entry>
+
+
+                    <Label Text="  " Grid.Row="6" Grid.Column="0" TextColor="Violet"/>
+
+                    <Button x:Name="btndel" Text="Borrar firma" FontSize="12" TextColor="Crimson" CornerRadius="8"  BackgroundColor="Transparent" BorderWidth="1" BorderColor="Crimson"  Grid.Row="7" Grid.Column="0"></Button>
+                    <Button x:Name="btnup" Text="Actualizar firma" FontSize="12" TextColor="OliveDrab" CornerRadius="8"  BackgroundColor="Transparent" BorderWidth="1" BorderColor="OliveDrab"  Grid.Row="7" Grid.Column="1"></Button>
+
+
+
+
+
+
+                </Grid>
+
+                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
